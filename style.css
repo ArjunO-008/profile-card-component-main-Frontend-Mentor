@@ -1,0 +1,159 @@
+@import url('https://fonts.google.com/specimen/Kumbh+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans';
+}
+
+:root {
+    --Darkcyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --Darkgrayishblue: hsl(227, 10%, 46%);
+    --Darkgray: hsl(0, 0%, 59%);
+}
+
+body {
+    background-color: var(--Darkcyan);
+    overflow: hidden;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+#img1{
+    position: absolute;
+    bottom: 35%;
+    right: 50%;
+    z-index: 1;   
+}
+
+#img2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;   
+}
+
+.card {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+    position: relative;
+    top: 60%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.card .bgimage {
+    width: 100%;
+    height: 125px;
+    background-color: black;
+    background: url(images/bg-pattern-card.svg) no-repeat center center;
+    background-size: cover;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.card .info {
+    width: 100%;
+    padding: 3%;
+}
+
+.bgimage .profileimage {
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    background: url(images/image-victor.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    position: relative;
+    top: 55%;
+    left: 35%;
+}
+
+.info h2 {
+    margin-top: 60px;
+    color: var(--Verydarkdesaturatedblue);
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.info h2 span {
+    color: var(--Darkgray);
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.info h3 {
+    margin-top: 5px;
+    color: var(--Darkgray);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.info .stats {
+    margin: 20px 0 15px 0;
+    border-top: 0.5px groove;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.stats span {
+    color: var(--Verydarkdesaturatedblue);
+    font-size: 1em;
+    font-weight: 700;
+
+}
+
+.stats p {
+    color: var(--Darkgrayishblue);
+    font-size: 0.7em;
+    font-weight: 400;
+
+}
+
+
+@media only screen and (max-width: 1440px) {
+    .card {
+        width: 25%;
+        top: 50%;
+        left: 50%;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .card {
+        width: 50%;
+        top: 70%;
+        left: 70%;
+    }   
+
+}
+@media only screen and (max-width: 375px) {
+    .card {
+        width: 100%;
+        top: 80%;
+        left: 80%;
+        transform: translate(0,0);
+    }   
+    #img1{       
+        bottom: -75%;
+        right: -50%;       
+    }    
+    #img2 {        
+        top: 125%;
+        left: 50%;       
+    }
+
+}
